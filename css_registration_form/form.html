@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title>Simple Registration Form by Daniel Huynh</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>Registration</h1>
+				<p>Please enter the following information. Fields marked with an asterisk (<span class="required">*</span>) are required.</p>
+			</header>
+			<div id="content">
+			<fieldset>
+			<form action="javascript:void(0);" method="post">
+			<legend>Personal Information</legend>
+				<table>
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" name="firstName">*<br></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" name="lastName">*<br></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td><input type="text" name="address" maxlength="40">*<br></td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td><input type="text" name="city">*<br></td>
+				</tr>
+				<tr>
+					<td>Province</td>
+					<td>
+					<select name="Provinces">
+						<option value="BC">British Columbia</option>
+						<option value="AB">Alberta</option>
+						<option value="MB">Saskatchewan</option>
+						<option value="BC">Manitoba</option>
+						<option value="AB">Ontario</option>
+						<option value="MB">Queec</option>
+						<option value="BC">New Brunswick</option>
+						<option value="AB">Nova Scotia</option>
+						<option value="MB">Prince Edward Island</option>
+						<option value="BC">Newfoundland</option>
+						<option value="AB">Yukon</option>
+						<option value="MB">Northwest Territories</option>
+						<option value="MB">Nunavut</option>
+						</select>*<br>
+				</tr>
+				<tr>
+					<td>Postal Code</td>
+					<td><input type="text" name="postalCode" maxlength="6">*<br></td>
+				</tr>
+				<tr>
+					<td>Email Address</td>
+					<td><input type="text" name="emailAddress">*<br></td>
+				</tr>
+				<tr>
+					<td>Home Phone</td>
+					<td><input type="text" name="homePhone">*<br></td>
+				</tr>
+				<tr>
+					<td>Work Phone</td>
+					<td><input type="text" name="workPhone"><br></td>
+				</tr>
+				</table>
+				<!-- * First Name | textbox -->
+				<!-- * Last Name | textbox -->
+				<!-- * Address | textbox, with a size of 40 characters -->
+				<!-- * City | textbox -->
+				<!-- * Province | dropdown box, has options for all provinces and territories. 
+					Option values should be the short code for the province. A list is provided below. 
+					
+					BC - British Columbia
+					AB - Alberta
+					SK - Saskatchewan
+					MB - Manitoba
+					ON - Ontario
+					QC - Quebec
+					NB - New Brunswick
+					NS - Nova Scotia
+					PE - Prince Edward Island
+					NF - Newfoundland
+					YK - Yukon
+					NWT- Northwest Territories
+					NU - Nunavut
+					
+				-->
+				<!-- * Postal Code | textbox, maximum length of 6 characters -->
+				<!-- * Email address | textbox -->
+				<!-- * Home phone | textbox -->
+				<!-- Work phone | textbox -->
+			</form>		
+			</fieldset>
+			<fieldset>
+				<legend>Payment Information</legend>
+				<table>
+				<tr>
+					<td><img src="images/visa.png" alt="visa"></td>
+					<td><input type="radio" name="creditCard" id=creditCardVisa></td>
+
+					<td><img src="images/amex.png" alt="amex"></td>
+					<td><input type="radio" name="creditCard" id=creditCardAmex></td>
+
+					<td><img src="images/mastercard.png" alt="mastercard"></td>
+					<td><input type="radio" name="creditCard" id=creditCardMasterCard></td>
+				</tr>
+				</table>
+				
+				<table>
+				<tr>
+					<td>Credit Card Number</td>
+					<td><input type="text" name="creditCardNumber">
+				</tr>
+				<tr>
+					<td>Expiry Date</td>
+					<td><input type="text" name="creditCardNumber" maxlength="5">
+				</table>
+
+				<!-- Credit Card Type | radio buttons
+					 
+					 There should be three buttons: one for VISA, one for MasterCard, and one for American Express.
+					 All three buttons can go in one <td> element.
+					 
+					 NOTE: each radio button should have the same name, but a different id. For example, you might use
+					 the name "creditCard" for each, but "creditCardVisa", "creditCardAmex" and "creditCardMasterCard"
+					 as the id's. 
+
+				-->
+
+				<!-- Credit Card Number | textbox -->
+				<!-- Expiry Date | textbox, maximum 5 characters (MM/YY) -->
+			</fieldset>
+			<fieldset>
+				<legend>Agree and Submit</legend>
+					<table>
+						<tr>
+							<td><input type="checkbox" name="agreeToTerms" value="yes"> Agree to Terms and Conditions? *</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td><button type="submit">Submit</button></td>
+							<td><button type="reset">Reset</button></td>
+						</tr>
+					</table>
+					<!-- * Agree to Terms and Conditions? | checkbox, value of 'yes' -->
+					<!-- No field name. Place a submit button in one column, and reset button in the other. -->
+			</fieldset>
+			</div><!-- End Content -->
+			<footer>	
+				<p>&copy;2013 CST8285. All rights reserved.</p>
+			</footer>
+		</div><!-- End Wrapper -->
+	</body>
+</html>

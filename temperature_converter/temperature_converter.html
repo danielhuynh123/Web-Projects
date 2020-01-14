@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Unit Converter by Daniel Huynh</title>
+	<meta charset="utf-8">
+	<script>
+		/*
+		Function that converts inputted temperture from Celsius to Fahrenheit: convertToFahrenheit.
+		The function first displays a prompt asking the user to enter a temperature as Celsius.
+		The value entered should be validated to ensure it is a number.
+		Then, the appropriate formula will be applied to convert the value.
+		Finally, an alert should be displayed indicating the original and converted value.
+		The function should be called when the appropriate button below is pressed.
+		*/
+		
+		//Welcome to Lab5 by Daniel Huynh
+		
+		/* 	Documentation of functions: 
+			
+		@1.  The function is triggered by the button's onclick event (found in body)
+		@2.  User's input is then accepted using a prompt, saved into variable celsiusTemp.
+		@3a. A while-loop is used to control input. If their entry is not a number (NaN),
+			 the while-loop is performed until their input into celsiusTemp is appropriate.
+		@3b. If their entry IS a number, the program while loop will break. The code continues right after the loop.
+		@4.  Once their input is verified, the program will convert the variable to fahrenheit,
+			 and saves it in var. celsiusToFahrenheit. Formula at the end of the script.
+		@5.  Finally, an alert() is used to display the user's input (celsiusTemp)
+			 and the converted variable (celsiusToFahrenheit). 
+		->   A .toFixed() method is used to keep the final output "clean" by turning the celsiusToFahrenheit variable to a String,
+			 and limiting the decimal places to (2). This was not part of the expectations but just an added feature that I learned on the internet.
+			
+		*/
+		
+		function convertToFahrenheit(){		
+			var celsiusTemp=parseFloat(prompt("Enter temperature in Celsius°")); //@2.
+			
+			while(isNaN(celsiusTemp)){ //@3a.
+				var celsiusTemp=parseFloat(prompt("You did not enter a number. Please try again and enter a number..."));
+			} //@3b.
+			
+			var celsiusToFahrenheit  = (celsiusTemp*9/5)+32; //@4.
+			alert("Your entry of \""+celsiusTemp+"\" degrees celsius was converted to "+celsiusToFahrenheit.toFixed(2)+"° Fahrenheit."); //@5.
+		}
+		
+		/* Formula -> T(°F) = T(°C) × 9/5 + 32
+		taken from https://www.rapidtables.com/convert/temperature/how-celsius-to-fahrenheit.html
+		*/
+	</script>
+</head>
+
+<body>
+<h3>Convert Temperature with JavaScript</h3>
+    <table>
+        <tr>
+            <th>Temperature conversion</th>
+        </tr>
+        <tr>	<!--@1.-->
+			<td><input type="button" name="btnConvert" id="btnConvert" value="Convert!" onclick="convertToFahrenheit()"></td>
+		</tr>
+    </table>
+</body>
+</html>
